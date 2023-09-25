@@ -14,9 +14,14 @@
 <?php 
 
 require_once("./Classes/Pet.php");
+require_once("./Classes/Owner.php");
 
 
-$hayawen = new Pet;
+$owner1     = new Owner("peter", "Montréal", "7000", "438-438-1111", "a@a.com");
+
+var_dump($owner1);
+
+$hayawen    = new Pet;
 
 $hayawen->setProp("hellooo", 18);
 $hayawen->getProp();

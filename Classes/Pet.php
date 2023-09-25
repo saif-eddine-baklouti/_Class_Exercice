@@ -1,6 +1,7 @@
     <?php 
-        final class Pet 
-        // extends Animal 
+
+        require_once("Animal.php");
+        final class Pet extends Animal 
         {
             public  $name; 
             public  $birthday;  
