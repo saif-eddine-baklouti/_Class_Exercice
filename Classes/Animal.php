@@ -4,15 +4,10 @@ abstract class Animal
 {
     protected   $type;
 
-    public function setProp($type) 
-    {
-        $this->type = $type;
-    }
+    abstract public function setProp($type, $name, $birthday); 
 
-    public function getProp() 
-    {
-        return $this->type;
-    }
+    abstract public function getProp(); 
+
 }
 
 

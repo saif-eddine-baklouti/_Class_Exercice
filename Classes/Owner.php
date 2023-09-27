@@ -2,7 +2,7 @@
 
 final class Owner 
 {
-    private $name;
+    private $name ;
     private $address;
     private $zipCode;
     private $phone;
@@ -16,6 +16,19 @@ final class Owner
         $this->email    = $email;
         
     }
+    public function getProp() {
+        return 
+        "
+            <ul>
+                <li> nom     : $this->name
+                <li> address : $this->address 
+                <li> zipCode : $this->zipCode 
+                <li> phone   : $this->phone  
+                <li> email   : $this->email  
+            </ul>    
+        ";
+    }
+
 }
 
 

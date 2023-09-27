@@ -20,18 +20,21 @@
                     
                 // }
             }
-            public function setProp($name, $birthday) 
-            {
+            public function setProp($name, $birthday, $type = "Cat") 
+            {   
+                $this->type = $type;
                 $this->name = $name;
                 $this->birthday = $birthday;
+                $this->age = $this->calculeAge();
             }
         
             public function getProp() 
             {
                 return "
+                        $this->type<br>
                         $this->name <br>
-                        $this->birthday
-                        $this->age  
+                        $this->birthday <br>
+                        $this->age  <br><br><br><br><br><br>
                         ";
             }
         }    
