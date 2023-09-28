@@ -1,6 +1,7 @@
     <?php 
 
         require_once("Animal.php");
+        
         final class Pet extends Animal 
         {
             public  $name; 
@@ -9,33 +10,32 @@
             
             public function calculeAge()  
             {
-                $today = new DateTime();
+                $today        = new DateTime();
                 $dateBirthday = new DateTime($this->birthday);
+                $dateAge      = $dateBirthday->diff($today);
 
-                $dateAge = $dateBirthday->diff($today);
-                
                 return $dateAge->y;
-                // if (!$dateBirthday) {
-                //     return "pas de date de naissance";
-                    
-                // }
+
             }
             public function setProp($name, $birthday, $type = "Cat") 
             {   
-                $this->type = $type;
-                $this->name = $name;
+                $this->type     = $type;
+                $this->name     = $name;
                 $this->birthday = $birthday;
-                $this->age = $this->calculeAge();
+                $this->age      = $this->calculeAge();
             }
         
             public function getProp() 
             {
-                return "
-                        $this->type<br>
-                        $this->name <br>
-                        $this->birthday <br>
-                        $this->age  <br><br><br><br><br><br>
-                        ";
+                return 
+                "
+                    <ul>
+                        <li> <small> Type :</small>     $this->type
+                        <li> <small> Name :</small>     $this->name 
+                        <li> <small> Birthday :</small> $this->birthday 
+                        <li> <small> Age :</small>      $this->age
+                    </ul>      
+                ";
             }
         }    
     ?>

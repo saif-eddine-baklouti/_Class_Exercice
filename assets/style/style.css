@@ -1,0 +1,37 @@
+    body 
+    {
+        background-color: rgb(37, 129, 99);
+    }
+
+    .parent-wrap 
+    {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .wrap 
+    {
+        background-color: rgb(161, 209, 193);
+        font-size: xx-large;
+        padding: 1rem;
+        align-items: flex-end;
+        border-radius: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border: 0.25rem solid #000;
+    }
+
+    li 
+    {
+        list-style: none;
+    }
+
+    ul 
+    {
+        margin: 2rem;
+    }
+
+    small 
+    {
+        margin-right: 0.5rem;
+    }
